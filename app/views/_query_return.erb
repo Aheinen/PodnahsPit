@@ -1,0 +1,9 @@
+<div class="queries">
+  <% @items.each do |meal| %>
+    <div class="query_container">
+      <p><%= meal.name %></p>
+      <p><%= meal.description %></p>
+      <p>$<%= meal.price %></p>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="single_menu">
+<h3>Lunch & Dinner Menu</h3>
+  <% @dinner.each do |course| %>
+  <div class="menu_container">
+    <h3><%= Course.where(id: course.first.course_id).first.name %></h3>
+    <% course.each do |meal| %>
+      <p class="hover"><%= meal.name %></p>
+      <p>$<%= meal.price %></p>
+    <% end %>
+  </div>
+  <% end %>
+</div>

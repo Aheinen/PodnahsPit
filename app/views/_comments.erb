@@ -1,0 +1,15 @@
+<h1>Join the Conversation!</h1>
+<form class="comments" method="post" action="/comments">
+    <input id="name" name="name" type="text" placeholder="Your Name&hellip;"></br>
+    <textarea id="comment" rows="5" columns="40" id="comment-input" name="comment" type="text" placeholder="Comment&hellip;"></textarea></br>
+    <input class="comment-button" type="submit" value="Submit">
+</form>
+<div class="comments-container">
+  <% Comment.all.each do |comment| %>
+    <div class="single-comment">
+      <h3 class="comment_name"><%= comment.name %></h3>
+      <p class="comment_name"><%= comment.created_at.strftime("%A, %d %b %Y %l:%M %p") %></p>
+      <p class="comment_name"><%= comment.description %></p>
+    </div>
+  <% end %>
+</div>
